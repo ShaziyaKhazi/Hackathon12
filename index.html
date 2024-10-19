@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Student Details</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Exam Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- Back Arrow -->
+    <button id="back-button" style="display: none;">← Back</button>
+
+    <!-- Login Form -->
+    <div id="login-page">
+        <h2>Student Login</h2>
+        <form id="login-form">
+            <label for="regNumber">Register Number:</label>
+            <input type="text" id="regNumber" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Branch and Year Selection -->
+    <div id="branch-year-page" style="display: none;">
+        <h2>Select Branch and Year</h2>
+        <label for="branch">Branch:</label>
+        <select id="branch" required>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="ECE">Electronics and Communication Engineering</option>
+            <option value="MECH">Mechanical Engineering</option>
+            <option value="EEE">Electrical Engineering</option>
+            <option value="CIVIL">Civil Engineering</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select id="year" required>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+        </select>
+
+        <button id="select-branch-year">Next</button>
+    </div>
+
+    <!-- Subject and Faculty Selection -->
+    <div id="subject-faculty-page" style="display: none;">
+        <h2>Select Subjects and Faculty</h2>
+        <div id="subject-list">
+            <!-- Dynamically populate subjects based on branch and year -->
+        </div>
+
+        <h3>Faculty Feedback & Rating</h3>
+        <div id="faculty-feedback">
+            <!-- Dynamically generated feedback for each faculty -->
+        </div>
+
+        <button id="submit-selection">Submit</button>
+    </div>
+
+</body>
+</html>
